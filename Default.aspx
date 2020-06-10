@@ -8,6 +8,7 @@
         <asp:Label ID="lblSubscribe" runat="server" Text="Succesfully subscribed!" Visible="false"></asp:Label>
         <br/>
         <asp:TextBox ID="tbValue" runat="server"></asp:TextBox>
+        <asp:Button ID="btnLoad" runat="server" Text="Load" OnClick="btnLoad_Click" />
     </div>
 
 

@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
-namespace Sprint_x
+namespace Mqtt_Test
 {
-    public partial class _Default : Page
+    class Program
     {
-
-        const string MQTT_BROKER_HOST_NAME = "broker.mqtt-dashboard.com";
+        const string MQTT_BROKER_HOST_NAME = "brokernamehere.com";
         protected void Page_Load(object sender, EventArgs e)
         {
             MqttProcessing();// call to the MQTT client setup steps.
@@ -31,7 +29,7 @@ namespace Sprint_x
             client.Connect(clientId);
 
             // subscribe to the topic "/home/temperature" with QoS 2 
-            client.Subscribe(new string[] { "Drippapp/sjoerdMessage" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+            client.Subscribe(new string[] { "hello/world" }, new byte {MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
 
         }
 
@@ -39,6 +37,7 @@ namespace Sprint_x
         {
             try
             {
+                string str = HttpContext.Current.Session["VariableName"].ToString();
                 Session["message"] = "Received = " +
                                      Encoding.UTF8.GetString(e.Message) + " on topic " + e.Topic;
             }
@@ -46,13 +45,6 @@ namespace Sprint_x
             {
                 Session["message"] = "ERROR:" + ex.Message;
             }
-        }
-
-        protected void btnLoad_Click(object sender, EventArgs e)
-        {
-            lblSubscribe.Visible = true;
-            tbValue.Text = Convert.ToString(Session["message"]);
-
         }
     }
 }
