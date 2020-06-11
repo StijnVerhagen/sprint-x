@@ -24,13 +24,13 @@ namespace Sprint_x
         protected global::System.Web.UI.WebControls.Label lblSubscribe;
 
         /// <summary>
-        /// tbValue control.
+        /// lblValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbValue;
+        protected global::System.Web.UI.WebControls.Label lblValue;
 
         /// <summary>
         /// btnLoad control.
@@ -40,5 +40,14 @@ namespace Sprint_x
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLoad;
+
+        /// <summary>
+        /// btnDisplay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDisplay;
     }
 }

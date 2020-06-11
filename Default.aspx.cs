@@ -13,46 +13,42 @@ namespace Sprint_x
     public partial class _Default : Page
     {
 
-        const string MQTT_BROKER_HOST_NAME = "broker.mqtt-dashboard.com";
+        const string MqttBrokerHostName = "broker.mqtt-dashboard.com";
+        const string SmartHubTopic = "smarthub/data";
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            MqttProcessing();// call to the MQTT client setup steps.
-        }
-
-        protected void MqttProcessing()
-        {
-            // create client instance 
-            MqttClient client = new MqttClient(MQTT_BROKER_HOST_NAME);
-
-            // register to message received 
-            client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
-
-            string clientId = Guid.NewGuid().ToString();
-            client.Connect(clientId);
-
-            // subscribe to the topic "/home/temperature" with QoS 2 
-            client.Subscribe(new string[] { "Drippapp/sjoerdMessage" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
-
-        }
-
-        void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
-        {
-            try
-            {
-                Session["message"] = "Received = " +
-                                     Encoding.UTF8.GetString(e.Message) + " on topic " + e.Topic;
-            }
-            catch (HttpException ex)
-            {
-                Session["message"] = "ERROR:" + ex.Message;
-            }
+           // MqttProcessing();// call to the MQTT client setup steps.
         }
 
         protected void btnLoad_Click(object sender, EventArgs e)
         {
-            lblSubscribe.Visible = true;
-            tbValue.Text = Convert.ToString(Session["message"]);
+            MqttClient client = new MqttClient(MqttBrokerHostName);
 
+            client.ProtocolVersion = MqttProtocolVersion.Version_3_1;
+
+            byte code = client.Connect(Guid.NewGuid().ToString());
+
+            ushort msgIds = client.Subscribe(new string[] { SmartHubTopic },
+                new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+
+            lblValue.Text = "";
+
+            client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
+        }
+        public void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+        {
+            string messageReceived = "Received = " + System.Text.Encoding.UTF8.GetString(e.Message) + " on topic " + e.Topic;
+
+            Session["messageSend"] = messageReceived;
+
+            // tbValue.Text += "Received = " + Encoding.UTF8.GetString(e.Message) + "on topic " + e.Topic + "\r\n";
+        }
+
+        public void btnDisplay_Click(object sender, EventArgs e)
+        {
+            string messageDisplay = Convert.ToString(Session["messageSend"]);
+            lblValue.Text = messageDisplay;
         }
     }
 }
