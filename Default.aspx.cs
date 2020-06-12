@@ -5,6 +5,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Threading;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
@@ -12,43 +13,49 @@ namespace Sprint_x
 {
     public partial class _Default : Page
     {
+        private const string MqttBrokerHostName = "broker.mqtt-dashboard.com";
+        private const string SmartHubTopic = "smarthub/data";
+        private string idCode;
+        private string message;
 
-        const string MqttBrokerHostName = "broker.mqtt-dashboard.com";
-        const string SmartHubTopic = "smarthub/data";
+        private MqttClient client;
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           // MqttProcessing();// call to the MQTT client setup steps.
+           client = new MqttClient(MqttBrokerHostName);
+
+           client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
+
+           idCode = Guid.NewGuid().ToString();
+
+           client.Connect(idCode);
+
         }
 
-        protected void btnLoad_Click(object sender, EventArgs e)
+        protected void btnSubscribe_Click(object sender, EventArgs e)
         {
-            MqttClient client = new MqttClient(MqttBrokerHostName);
-
-            client.ProtocolVersion = MqttProtocolVersion.Version_3_1;
-
-            byte code = client.Connect(Guid.NewGuid().ToString());
-
-            ushort msgIds = client.Subscribe(new string[] { SmartHubTopic },
+            client.Subscribe(new string[] { SmartHubTopic },
                 new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
-
             lblValue.Text = "";
-
-            client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
-        }
-        public void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
-        {
-            string messageReceived = "Received = " + System.Text.Encoding.UTF8.GetString(e.Message) + " on topic " + e.Topic;
-
-            Session["messageSend"] = messageReceived;
-
-            // tbValue.Text += "Received = " + Encoding.UTF8.GetString(e.Message) + "on topic " + e.Topic + "\r\n";
         }
 
-        public void btnDisplay_Click(object sender, EventArgs e)
+        protected void btnPublish_Click(object sender, EventArgs e)
         {
-            string messageDisplay = Convert.ToString(Session["messageSend"]);
-            lblValue.Text = messageDisplay;
+            if (tbMessageSend.Text != "")
+            {
+                message = tbMessageSend.Text;
+                client.Publish(SmartHubTopic, Encoding.UTF8.GetBytes(message), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
+            }
+            
+        }
+
+        void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+        {
+            string ReceivedMessage = Encoding.UTF8.GetString(e.Message);
+
+            lblValue.Text = ReceivedMessage;
+            lblValue.Visible = true;
         }
     }
 }

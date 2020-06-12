@@ -33,21 +33,30 @@ namespace Sprint_x
         protected global::System.Web.UI.WebControls.Label lblValue;
 
         /// <summary>
-        /// btnLoad control.
+        /// tbMessageSend control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLoad;
+        protected global::System.Web.UI.WebControls.TextBox tbMessageSend;
 
         /// <summary>
-        /// btnDisplay control.
+        /// btnSubscribe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDisplay;
+        protected global::System.Web.UI.WebControls.Button btnSubscribe;
+
+        /// <summary>
+        /// btnPublish control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPublish;
     }
 }

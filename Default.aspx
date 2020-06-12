@@ -9,10 +9,11 @@
         <h1>Hi there</h1>
         <p class="lead">Welkom op mijn MQTT test omgeving.</p>
         <asp:Label ID="lblSubscribe" runat="server" Text="Succesfully subscribed!" Visible="false"></asp:Label>
-        <asp:Label ID="lblValue" runat="server" Text="Value" Visible="false"></asp:Label>
+        <asp:Label ID="lblValue" runat="server" Text="" ></asp:Label>
         <br/>
-        <asp:Button ID="btnLoad" runat="server" Text="Load" OnClick="btnLoad_Click" />
-        <asp:Button ID="btnDisplay" runat="server" Text="Display" OnClick="btnDisplay_Click" />
+        <asp:TextBox ID="tbMessageSend" runat="server"></asp:TextBox>
+        <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" OnClick="btnSubscribe_Click" />
+        <asp:Button ID="btnPublish" runat="server" Text="Publish" OnClick="btnPublish_Click" />
     </div>
 
 
