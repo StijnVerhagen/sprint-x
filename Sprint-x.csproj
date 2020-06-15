@@ -109,7 +109,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Bootstrap Template\assets\css\bootstrap.min.css" />
+    <Content Include="Bootstrap Template\assets\css\now-ui-dashboard.css" />
+    <Content Include="Bootstrap Template\assets\css\now-ui-dashboard.min.css" />
+    <Content Include="Bootstrap Template\assets\demo\demo.css" />
+    <Content Include="Bootstrap Template\assets\demo\demo.js" />
+    <Content Include="Bootstrap Template\assets\img\apple-icon.png" />
+    <Content Include="Bootstrap Template\assets\img\bg5.jpg" />
+    <Content Include="Bootstrap Template\assets\img\default-avatar.png" />
+    <Content Include="Bootstrap Template\assets\img\favicon.png" />
+    <Content Include="Bootstrap Template\assets\img\header.jpg" />
+    <Content Include="Bootstrap Template\assets\img\mike.jpg" />
+    <Content Include="Bootstrap Template\assets\img\now-logo.png" />
+    <Content Include="Bootstrap Template\assets\img\now-ui-dashboard.gif" />
+    <Content Include="Bootstrap Template\assets\js\core\bootstrap.min.js" />
+    <Content Include="Bootstrap Template\assets\js\core\jquery.min.js" />
+    <Content Include="Bootstrap Template\assets\js\core\popper.min.js" />
+    <Content Include="Bootstrap Template\assets\js\now-ui-dashboard.js" />
+    <Content Include="Bootstrap Template\assets\js\now-ui-dashboard.min.js" />
+    <Content Include="Bootstrap Template\assets\js\plugins\bootstrap-notify.js" />
+    <Content Include="Bootstrap Template\assets\js\plugins\chartjs.min.js" />
+    <Content Include="Bootstrap Template\assets\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Bootstrap Template\docs\documentation.html" />
+    <Content Include="Bootstrap Template\examples\dashboard.html" />
+    <Content Include="Bootstrap Template\examples\icons.html" />
+    <Content Include="Bootstrap Template\examples\map.html" />
+    <Content Include="Bootstrap Template\examples\notifications.html" />
+    <Content Include="Bootstrap Template\examples\tables.html" />
+    <Content Include="Bootstrap Template\examples\typography.html" />
+    <Content Include="Bootstrap Template\examples\upgrade.html" />
+    <Content Include="Bootstrap Template\examples\user.html" />
+    <Content Include="Bootstrap Template\gulpfile.js" />
+    <Content Include="Bootstrap Template\nucleo-icons.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -128,6 +160,49 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Bootstrap Template\assets\css\bootstrap.min.css.map" />
+    <Content Include="Bootstrap Template\assets\css\now-ui-dashboard.css.map" />
+    <Content Include="Bootstrap Template\assets\fonts\nucleo-license.md" />
+    <Content Include="Bootstrap Template\assets\fonts\nucleo-outline.eot" />
+    <Content Include="Bootstrap Template\assets\fonts\nucleo-outline.ttf" />
+    <Content Include="Bootstrap Template\assets\fonts\nucleo-outline.woff" />
+    <Content Include="Bootstrap Template\assets\fonts\nucleo-outline.woff2" />
+    <Content Include="Bootstrap Template\assets\js\now-ui-dashboard.js.map" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\cards\_card-chart.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\cards\_card-map.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\cards\_card-plain.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\cards\_card-user.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\mixins\_buttons.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\mixins\_cards.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\mixins\_dropdown.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\mixins\_inputs.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\mixins\_page-header.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\mixins\_sidebar.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\mixins\_transparency.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\mixins\_vendor-prefixes.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\plugins\_plugin-animate-bootstrap-notify.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\plugins\_plugin-perfect-scrollbar.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_alerts.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_buttons.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_cards.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_checkboxes-radio.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_dropdown.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_fixed-plugin.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_footers.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_images.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_inputs.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_misc.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_mixins.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_navbar.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_nucleo-outline.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_page-header.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_responsive.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_sidebar-and-main-panel.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_tables.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_typography.scss" />
+    <Content Include="Bootstrap Template\assets\scss\now-ui-dashboard\_variables.scss" />
+    <Content Include="Bootstrap Template\package.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -165,12 +240,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contact.aspx.cs">

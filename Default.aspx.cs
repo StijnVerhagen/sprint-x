@@ -24,9 +24,7 @@ namespace Sprint_x
         private const string SmartHubTopic = "smarthub/data";
         private string idCode;
         private string message;
-
-        private Thread valueThread;
-
+         
         private MqttClient client;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -49,6 +47,8 @@ namespace Sprint_x
                 new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
             lblSubscribe.Visible = true;
             tbMessageReceived.Text = "";
+            // this.UpdatePanel();
+            
         }
 
         protected void btnPublish_Click(object sender, EventArgs e)
@@ -79,5 +79,6 @@ namespace Sprint_x
             // tbMessageReceived.Text = ReceivedMessage;
 
         }
+
     }
 }
