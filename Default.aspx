@@ -8,8 +8,8 @@
         <asp:Label ID="lblSubscribe" runat="server" Text="Succesfully subscribed!" Visible="false"></asp:Label>
         <br/>
         <asp:TextBox ID="tbMessageSend" placeholder="Publish message" runat="server"></asp:TextBox>
-        <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" OnClick="btnSubscribe_Click" />
-        <asp:Button ID="btnPublish" runat="server" Text="Publish" OnClick="btnPublish_Click" />
+        <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" />
+        <asp:Button ID="btnPublish" runat="server" Text="Publish" />
         <br />
         <br />
         <br />
