@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="MqttTest" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Sprint_x._Default" EnableSessionState="true"%>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <link rel="stylesheet" href="/Bootstrap Template/assets/css/now-ui-dashboard.css">
+    <link rel="stylesheet" href="/BootstrapTemplate/css/now-ui-dashboard.css">
 
     <div class="jumbotron">
         <h1>Hi there</h1>
