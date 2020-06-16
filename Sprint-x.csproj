@@ -117,7 +117,6 @@
     <Content Include="BootstrapTemplate\chart.html" />
     <Content Include="BootstrapTemplate\css\bootstrap-datetimepicker.min.css" />
     <Content Include="BootstrapTemplate\css\font-face.css" />
-    <Content Include="BootstrapTemplate\css\now-ui-dashboard.css" />
     <Content Include="BootstrapTemplate\css\theme.css" />
     <Content Include="BootstrapTemplate\fontawesome.html" />
     <Content Include="BootstrapTemplate\fonts\poppins\poppins-v5-latin-100.svg" />
@@ -463,6 +462,8 @@
     <Content Include="BootstrapTemplate\vendor\slick\slick.scss" />
     <Content Include="BootstrapTemplate\~%24README.md" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Images\Sprint-X-Stijn-Verhagen.png" />
+    <Content Include="Images\x-Stijn.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

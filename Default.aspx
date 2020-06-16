@@ -3,17 +3,17 @@
     <link rel="stylesheet" href="/BootstrapTemplate/css/now-ui-dashboard.css">
 
     <div class="jumbotron">
-        <h1>Hi there</h1>
-        <p class="lead">Welkom op mijn MQTT test omgeving.</p>
+        <h1>Welkom op mijn MQTT test omgeving.</h1>
         <asp:Label ID="lblSubscribe" runat="server" Text="Succesfully subscribed!" Visible="false"></asp:Label>
         <br/>
-        <asp:TextBox ID="tbMessageSend" placeholder="Publish message" runat="server"></asp:TextBox>
-        <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" />
-        <asp:Button ID="btnPublish" runat="server" Text="Publish" />
+        <asp:TextBox ID="tbMessageSend" placeholder="Publish message" runat="server" Height="28px" Width="238px"></asp:TextBox>
+        <br /> 
+        <asp:Button ID="btnSubscribe" runat="server" class="btn btn-light" Text="Subscribe" />
+        <asp:Button ID="btnPublish" runat="server" class="btn btn-light" Text="Publish" />
         <br />
+        <br /> <%--Ja ik weet het Breaks zijn niet goed, sorry :)--%>
         <br />
-        <br />
-        <asp:TextBox ID="tbMessageReceived" runat="server" Height="75px" Width="160px" placeholder="Received message"></asp:TextBox>
+        <asp:TextBox ID="tbMessageReceived" runat="server" Height="75px" Width="237px" placeholder="Received message"></asp:TextBox>
     </div>
 
 

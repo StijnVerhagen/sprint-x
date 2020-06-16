@@ -75,7 +75,7 @@
                     <div class="container-fluid">
                         <div class="header-mobile-inner">
                             <a class="logo" href="BootstrapTemplate/index.html">
-                                <img src="BootstrapTemplate/images/icon/logo.png" alt="CoolAdmin" />
+                                <img src="/Images/Sprint-X-Stijn-Verhagen.png" alt="Sprint X Stijn Verhagen" />
                             </a>
                             <button class="hamburger hamburger--slider" type="button">
                                 <span class="hamburger-box">
@@ -190,49 +190,42 @@
             <aside class="menu-sidebar d-none d-lg-block">
                 <div class="logo">
                     <a href="#">
-                        <img src="BootstrapTemplate/images/icon/logo.png" alt="Cool Admin" />
+                        <img src="/Images/Sprint-X-Stijn-Verhagen.png" alt="Sprint X Stijn Verhagen" />
                     </a>
                 </div>
                 <div class="menu-sidebar__content js-scrollbar1">
                     <nav class="navbar-sidebar">
                         <ul class="list-unstyled navbar__list">
-                            <li class="active has-sub">
-                                <a class="js-arrow" href="#">
-                                    <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                                <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                    <li>
-                                        <a href="BootstrapTemplate/index.html">Dashboard 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="BootstrapTemplate/index2.html">Dashboard 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="BootstrapTemplate/index3.html">Dashboard 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="BootstrapTemplate/index4.html">Dashboard 4</a>
-                                    </li>
-                                </ul>
+                            <li>
+                                <a href="/Dashboard.aspx">
+                                    <i class="fas fa-tachometer-alt"></i>Dashboard
+                                </a>
+                                
                             </li>
                             <li>
-                                <a href="BootstrapTemplate/chart.html">
-                                    <i class="fas fa-chart-bar"></i>Charts</a>
+                                <a href="/Default.aspx">
+                                    <i class="fa fa-cog"></i>POC - MQTT Connection
+                                </a>
                             </li>
                             <li>
                                 <a href="BootstrapTemplate/table.html">
-                                    <i class="fas fa-table"></i>Tables</a>
+                                    <i class="fas fa-table"></i>Tables
+                                </a>
                             </li>
                             <li>
                                 <a href="BootstrapTemplate/form.html">
-                                    <i class="far fa-check-square"></i>Forms</a>
+                                    <i class="far fa-check-square"></i>Forms
+                                </a>
                             </li>
                             <li>
                                 <a href="BootstrapTemplate/calendar.html">
-                                    <i class="fas fa-calendar-alt"></i>Calendar</a>
+                                    <i class="fas fa-calendar-alt"></i>Calendar
+                                </a>
                             </li>
                             <li>
                                 <a href="BootstrapTemplate/map.html">
-                                    <i class="fas fa-map-marker-alt"></i>Maps</a>
+                                    <i class="fas fa-map-marker-alt"></i>Maps
+                                </a>
                             </li>
                             <li class="has-sub">
                                 <a class="js-arrow" href="#">
@@ -302,9 +295,9 @@
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Zoek naar recente douchebeurten..." />
+                                <button class="btn btn-secondary searchbtn" type="submit">
+                                    <i class="zmdi zmdi-search searchicon"></i>
                                 </button>
                             </form>
                             <div class="header-button">
@@ -314,7 +307,7 @@
                                         <span class="quantity">1</span>
                                         <div class="mess-dropdown js-dropdown">
                                             <div class="mess__title">
-                                                <p>You have 2 news message</p>
+                                                <p>Je hebt 2 nieuwe berichten</p>
                                             </div>
                                             <div class="mess__item">
                                                 <div class="image img-cir img-40">
@@ -322,8 +315,8 @@
                                                 </div>
                                                 <div class="content">
                                                     <h6>Michelle Moreno</h6>
-                                                    <p>Have sent a photo</p>
-                                                    <span class="time">3 min ago</span>
+                                                    <p>Heeft 56 liter verbruikt</p>
+                                                    <span class="time">3 min geleden</span>
                                                 </div>
                                             </div>
                                             <div class="mess__item">
@@ -332,12 +325,12 @@
                                                 </div>
                                                 <div class="content">
                                                     <h6>Diane Myers</h6>
-                                                    <p>You are now connected on message</p>
-                                                    <span class="time">Yesterday</span>
+                                                    <p>Heeft 134 liter verbruikt</p>
+                                                    <span class="time">Gisteren</span>
                                                 </div>
                                             </div>
                                             <div class="mess__footer">
-                                                <a href="#">View all messages</a>
+                                                <a href="#">Alle berichten</a>
                                             </div>
                                         </div>
                                     </div>
@@ -482,5 +475,29 @@
         </div>
 
     </form>
+
+<script src="BootstrapTemplate/vendor/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap JS-->
+<script src="BootstrapTemplate/vendor/bootstrap-4.1/popper.min.js"></script>
+<script src="BootstrapTemplate/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<!-- Vendor JS       -->
+<script src="BootstrapTemplate/vendor/slick/slick.min.js">
+</script>
+<script src="BootstrapTemplate/vendor/wow/wow.min.js"></script>
+<script src="BootstrapTemplate/vendor/animsition/animsition.min.js"></script>
+<script src="BootstrapTemplate/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+</script>
+<script src="BootstrapTemplate/vendor/counter-up/jquery.waypoints.min.js"></script>
+<script src="BootstrapTemplate/vendor/counter-up/jquery.counterup.min.js">
+</script>
+<script src="BootstrapTemplate/vendor/circle-progress/circle-progress.min.js"></script>
+<script src="BootstrapTemplate/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="BootstrapTemplate/vendor/chartjs/Chart.bundle.min.js"></script>
+<script src="BootstrapTemplate/vendor/select2/select2.min.js">
+</script>
+
+<!-- Main JS-->
+<script src="BootstrapTemplate/js/main.js"></script>
+
 </body>
 </html>

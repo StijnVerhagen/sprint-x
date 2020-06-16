@@ -288,24 +288,6 @@ section {
 }
 .page-container {
     background: #e5e5e5;
-    padding-left: 300px;
-}
-
-@media (max-width: 991px) {
-    .page-container {
-        position: relative;
-        top: 88px;
-        padding-left: 0;
-    }
-}
-
-.page-container2 {
-    background: #f2f2f2;
-    padding-left: 300px;
-}
-
-@media (max-width: 991px) {
-    .page-container2 {
         position: relative;
         padding-left: 0;
     }
@@ -316,7 +298,30 @@ section {
 }
 
 .main-content {
-    padding-top: 116px;
+    /*padding-top: 116px;*/
+    min-height: 100vh;
+}
+
+@media (max-width: 991px) {
+    .main-content {
+        padding-top: 50px;
+	padding-bottom: 100px;
+    }
+}
+
+.page-content--bgf7 {
+    background: #f7f7f7;
+}
+
+.page-content--bge5 {
+    background: #e5e5e5;
+    height: 100vh;
+}
+
+.login-wrap {
+    max-width: 540px;
+    padding-top: 8vh;
+    ma
     min-height: 100vh;
 }
 
@@ -828,33 +833,59 @@ section {
 }
 
 .au-btn--submit {
-    position: relative;
-    right: 0;
-    min-width: 65px;
-    line-height: 43px;
-    border: 1px solid #e5e5e5;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    background: #4272d7;
-    margin-left: -3px;
-}
-
-.au-btn--submit:hover {
-    background: #3868cd;
-}
-
-.au-btn--submit > i {
-    font-size: 20px;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: relative;  
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    color: #4c4c4c;
+    font-size: 20px;
+}
+
+.searchbtn {
+    height: 35px;
+    width: 35px;
+
+}
+
+.searchbtn .searchicon {
+    font-size: 20px;
+
+}
+
+.rs-select2--sm {
+    width: 114px;
+}
+
+.rs-select2--md {
+    width: 160px;
+}
+
+.select2-container {
+    displainer {
+    display: block;
+    max-width: 100% !important;
+    width: auto !important;
+    outline: none;
+}
+
+.rs-select2--dark {
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    .rs-select2--dark {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.rs-select2--daransform: translate(-50%, -50%);
+}
+
+.rs-select2--daransform: translate(-50%, -50%);
 }
 
 .au-btn--submit2 {
