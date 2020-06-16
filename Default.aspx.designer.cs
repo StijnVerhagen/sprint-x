@@ -33,15 +33,6 @@ namespace Sprint_x
         protected global::System.Web.UI.WebControls.TextBox tbMessageSend;
 
         /// <summary>
-        /// btnSubscribe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubscribe;
-
-        /// <summary>
         /// btnPublish control.
         /// </summary>
         /// <remarks>
@@ -51,6 +42,24 @@ namespace Sprint_x
         protected global::System.Web.UI.WebControls.Button btnPublish;
 
         /// <summary>
+        /// UpdatePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel;
+
+        /// <summary>
+        /// Timer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.Timer Timer;
+
+        /// <summary>
         /// tbMessageReceived control.
         /// </summary>
         /// <remarks>
@@ -58,5 +67,14 @@ namespace Sprint_x
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbMessageReceived;
+
+        /// <summary>
+        /// btnGetMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGetMessage;
     }
 }
