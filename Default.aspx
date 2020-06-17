@@ -1,25 +1,20 @@
 ﻿<%@ Page Title="MqttTest" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Sprint_x._Default" EnableSessionState="true"%>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <link rel="stylesheet" href="/Bootstrap Template/assets/css/now-ui-dashboard.css">
+    <link rel="stylesheet" href="/BootstrapTemplate/css/now-ui-dashboard.css">
 
     <div class="jumbotron">
-        <h1>Hi there</h1>
-        <p class="lead">Welkom op mijn MQTT test omgeving.</p>
+        <h1>Welkom op mijn MQTT test omgeving.</h1>
         <asp:Label ID="lblSubscribe" runat="server" Text="Succesfully subscribed!" Visible="false"></asp:Label>
         <br/>
-        <asp:TextBox ID="tbMessageSend" placeholder="Publish message" runat="server"></asp:TextBox>
-        <asp:Button ID="btnPublish" runat="server" Text="Publish" OnClick="btnPublish_Click" />
+        <asp:TextBox ID="tbMessageSend" placeholder="Publish message" runat="server" Height="28px" Width="238px"></asp:TextBox>
+        <br /> 
+        <asp:Button ID="btnSubscribe" runat="server" class="btn btn-light" Text="Subscribe" />
+        <asp:Button ID="btnPublish" runat="server" class="btn btn-light" Text="Publish" />
         <br />
+        <br /> <%--Ja ik weet het Breaks zijn niet goed, sorry :)--%>
         <br />
-        <asp:UpdatePanel runat="server" ID="UpdatePanel" UpdateMode="Conditional">
-            <ContentTemplate>
-                <asp:Timer runat="server" ID="Timer" Interval="1000" OnTick="Timer_Tick"></asp:Timer>
-                
-                <asp:TextBox ID="tbMessageReceived" runat="server" Height="75px" Width="300px" placeholder="Received message" AutoPostBack="True"></asp:TextBox>
-                <asp:Button ID="btnGetMessage" runat="server" Text="Get last message" OnClick="btnLastMessage_Click" />
-
-            </ContentTemplate>
-        </asp:UpdatePanel>
+        <asp:TextBox ID="tbMessageReceived" runat="server" Height="75px" Width="237px" placeholder="Received message"></asp:TextBox>
     </div>
+
 
 </asp:Content>
