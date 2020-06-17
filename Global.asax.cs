@@ -15,6 +15,8 @@ namespace Sprint_x
 {
     public class Global : HttpApplication
     {
+
+        // Declaring all variables
         private const string MqttBrokerHostName = "broker.mqtt-dashboard.com";
         private string idCode;
 
@@ -27,17 +29,22 @@ namespace Sprint_x
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             
+            // Creating client to broker
             client = new MqttClient(MqttBrokerHostName);
+            // Check for updates in broker
             client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
+            // Create user ID code string
             idCode = Guid.NewGuid().ToString();
+            // Connect to client with ID code
             client.Connect(idCode);
-
+            // Subscribe to the smarthub/data topic in broker
             client.Subscribe(new string[] { SmartHubTopic },
                 new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
         }
 
         protected void Application_End(object sender, EventArgs e)
         {
+            // Disconnect from client when application ends
             client.Disconnect();
         }
 
@@ -49,6 +56,7 @@ namespace Sprint_x
             // Display message in console
             System.Diagnostics.Debug.WriteLine("Message: " + message);
 
+            // Put message in Application["LastMessage"] to display in UI
             Application["LastMessage"] = message;
         }
         
