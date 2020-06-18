@@ -123,7 +123,7 @@
                                                         <h1 class="h1-asplabel"><asp:Literal ID="lblEuro" runat="server">€0</asp:Literal></h1>
                                                     </ContentTemplate>
                                                 </asp:UpdatePanel>
-                                                <span>Totaal besteed</span>
+                                                <span>Huidig besteed</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">

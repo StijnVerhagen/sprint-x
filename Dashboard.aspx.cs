@@ -53,12 +53,14 @@ namespace Sprint_x
 
                 double dblLiter = Liter(input);
 
-                outputkWh = Kwh(dblLiter);
+                double dblKwh = Kwh(dblLiter);
 
-                outputEuro = Euro(dblLiter);
+                double dblEuro = Euro(dblLiter);
 
-                // Liter naar string
+                // Convert naar string
                 outputLiter = dblLiter.ToString();
+                outputkWh = dblKwh.ToString();
+                outputEuro = "€" + dblEuro;
 
                 // Variabele terug sturen
                 return (outputLiter, outputkWh, outputEuro);
@@ -82,28 +84,30 @@ namespace Sprint_x
             return dblLiter;
         }
 
-        protected string Kwh(double inputK)
+        protected double Kwh(double inputK)
         {
             double kWh;
             double x = 0.2;
             double y = 5;
 
-            // Met het berekende aantal liter water, het kWh verbruik berekeren
+            // Met het berekende aantal liter water, het kWh verbruik berekenen
             kWh = (inputK / y) * x;
 
-            string outputkWh = (Math.Round(kWh), 2).ToString();
+            // Afronden naar 2 decimalen
+            double outputkWh = Math.Round(kWh, 2);
 
-            // Haalt de haakjes weg van 'outputkWh'
-            // Om een of andere reden word 5,238342 kWh afgerond naar (5,2) --> met haakjes
-            outputkWh = outputkWh.Substring(1, outputkWh.Length - 2);
 
             return outputkWh;
         }
 
-        protected string Euro(double inputE)
+        protected double Euro(double inputE)
         {
+            double euro;
 
-            return null;
+            // Bedrag uitrekenen en afronden naar 2 decimalen
+            euro = Math.Round((inputE * 0.014), 2);
+
+            return euro;
         }
     }
 }
