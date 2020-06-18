@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Dashboard" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="Sprint_x.About" %>
+﻿<%@ Page Title="Dashboard" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="Sprint_x.Dashboard" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="/BootstrapTemplate/css/now-ui-dashboard.css">
@@ -66,33 +66,21 @@
                                     <div class="overview__inner">
                                         <div class="overview-box clearfix">
                                             <div class="icon">
-                                                <i class="zmdi zmdi-shopping-cart"></i>
+                                                <i class="zmdi zmdi-pin"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>388,688</h2>
-                                                <span>items solid</span>
+                                                <asp:UpdatePanel runat="server" ID="UpdatePanelLiter" UpdateMode="Conditional">
+                                                <ContentTemplate>
+                                                    <asp:Timer runat="server" ID="TimerLiter" Interval="1000" OnTick="Timer_Tick"></asp:Timer>
+                                                    <h1 class="h1-asplabel"><asp:Literal ID="lblLiter" runat="server">0</asp:Literal></h1>
+                                                    <%--<asp:Label ID="lblLiter" class="h1-asplabel" runat="server" Text="0"></asp:Label>--%>
+                                                </ContentTemplate>
+                                                </asp:UpdatePanel>
+                                                <span>Huidige liters</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
                                             <canvas id="widgetChart2"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c1">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-account-o"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>10368</h2>
-                                                <span>members online</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart1"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -105,9 +93,15 @@
                                                 <i class="zmdi zmdi-calendar-note"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>1,086</h2>
-                                                <span>this week</span>
-                                            </div>
+                                            <asp:UpdatePanel runat="server" ID="UpdatePanelkWh" UpdateMode="Conditional">
+                                                <ContentTemplate>
+                                                    <asp:Timer runat="server" ID="TimerkWh" Interval="1000" OnTick="Timer_Tick"></asp:Timer>
+                                                    <h1 class="h1-asplabel"><asp:Literal ID="lblkWh" runat="server">0</asp:Literal></h1>
+                                                    <%--<asp:Label ID="lblLiter" class="h1-asplabel" runat="server" Text="0"></asp:Label>--%>
+                                                </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                            <span>Huidige kWh</span>
+                                        </div>
                                         </div>
                                         <div class="overview-chart">
                                             <canvas id="widgetChart3"></canvas>
@@ -123,12 +117,35 @@
                                                 <i class="zmdi zmdi-money"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>$1,060,386</h2>
-                                                <span>total earnings</span>
+                                                <asp:UpdatePanel runat="server" ID="UpdatePanelEuro" UpdateMode="Conditional">
+                                                    <ContentTemplate>
+                                                        <asp:Timer runat="server" ID="TimerEuro" Interval="1000" OnTick="Timer_Tick"></asp:Timer>
+                                                        <h1 class="h1-asplabel"><asp:Literal ID="lblEuro" runat="server">€0</asp:Literal></h1>
+                                                    </ContentTemplate>
+                                                </asp:UpdatePanel>
+                                                <span>Totaal besteed</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
                                             <canvas id="widgetChart4"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c1">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-account-o"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>67</h2>
+                                                <span>Douchebeurten</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart1"></canvas>
                                         </div>
                                     </div>
                                 </div>

@@ -11,11 +11,11 @@
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          labels: ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli'],
           type: 'line',
           datasets: [{
             data: [78, 81, 80, 45, 34, 12, 40],
-            label: 'Dataset',
+            label: 'Douchebeurten',
             backgroundColor: 'rgba(255,255,255,.1)',
             borderColor: 'rgba(255,255,255,.55)',
           },]
@@ -77,11 +77,11 @@
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+          labels: ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni'],
           type: 'line',
           datasets: [{
-            data: [1, 18, 9, 17, 34, 22],
-            label: 'Dataset',
+            data: [1121, 1208, 1096, 1003, 1240, 1384],
+            label: 'Aantal liters',
             backgroundColor: 'transparent',
             borderColor: 'rgba(255,255,255,.55)',
           },]

@@ -15,13 +15,13 @@ namespace Sprint_x
     {
 
         /// <summary>
-        /// lblSubscribe control.
+        /// lblPublish control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSubscribe;
+        protected global::System.Web.UI.WebControls.Label lblPublish;
 
         /// <summary>
         /// tbMessageSend control.
@@ -58,6 +58,15 @@ namespace Sprint_x
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.Timer Timer;
+
+        /// <summary>
+        /// lblReceived control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblReceived;
 
         /// <summary>
         /// tbMessageReceived control.
