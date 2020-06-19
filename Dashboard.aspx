@@ -216,7 +216,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>Stijn Verhagen - Sprint X - Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                    <p>Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                                 </div>
                             </div>
                         </div>
