@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -31,13 +32,9 @@ namespace Sprint_x
 
         protected void btnPublish_Click(object sender, EventArgs e)
         {
-            // If a message has been submitted --> publish message
-            if (tbMessageSend.Text != "")
-            {
-                string message = tbMessageSend.Text;
+            string message = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss");
 
-                Global.client.Publish(Global.SmartHubTopic, Encoding.UTF8.GetBytes(message), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
-            }
+            Global.client.Publish(Global.SmartHubTopic, Encoding.UTF8.GetBytes(message), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, true);
         }
 
         protected void Timer_Tick(object sender, EventArgs e)
@@ -47,5 +44,12 @@ namespace Sprint_x
 
             UpdatePanel.Update();
         }
+
+        protected void Page_PreRenderComplete(object sender, EventArgs e)
+        {
+            //txtBox.Text += "\nPreRenderComplete";
+        }
+
+
     }
 }

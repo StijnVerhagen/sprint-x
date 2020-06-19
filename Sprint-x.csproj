@@ -461,6 +461,9 @@
     <Content Include="BootstrapTemplate\vendor\slick\slick.less" />
     <Content Include="BootstrapTemplate\vendor\slick\slick.scss" />
     <Content Include="BootstrapTemplate\~%24README.md" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\toFolder.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\Sprint-X-Stijn-Verhagen.png" />
     <Content Include="Images\x-Stijn.png" />
